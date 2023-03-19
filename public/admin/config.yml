@@ -21,8 +21,8 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: Image, name: image, widget: list,
             fields:
-              - {label: URL, name: url, widget: string}
-              - {label: Alt Test, name: alt, widget: string}
+              - {label: URL, name: url, widget: string},
+              - {label: Alt Test, name: alt, widget: string},
         }
       - {label: "Tags", name: "tag", widget: "array"}
       - {label: "Body", name: "body", widget: "markdown"}
