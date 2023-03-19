@@ -1,9 +1,11 @@
 ---
-layout: blog
+layout: ../../layouts/MarkdownPostLayout.astro
 title: This is a test
 description: This is a test new blog
-date: 2023-03-19T15:39:37.877Z
-heroImage: https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
-tag: Test
+pubDate: 2022-08-08
+image: 
+  url: "https://docs.astro.build/default-og-image.png"
+  alt: "The word “astro” against an illustration of planets and stars."
+tags: ["astro", "successes"]
 ---
 L﻿orem ipsum dolor sit amet
