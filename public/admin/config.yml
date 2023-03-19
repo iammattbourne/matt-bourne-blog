@@ -19,5 +19,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Tags", name: "tag", widget: "array"}
+      - {label: "Tags", name: "tag", widget: "select", multiple: true, options: ["astro", "test blog", "another taxonomy"]}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: URL, name: url, widget: string}
+      - {label: Alt Test, name: alt, widget: string},
