@@ -1,7 +1,10 @@
---- 
 ---
+import { Image } from '@astrojs/image/components';
+import logo from '../assets/images/mattBourneLogo.png';
+---
+
 <a href="/" class="flex items-center">
-    <img src="../src/assets/images/mattBourneLogo.png" class="mr-3 lg:h-24 h-16" alt="Matt Bourne Logo" />
+    <Image src={logo} height={96} class="mr-3 w-auto lg:h-24 h-16" aspectRatio="85:96" alt="Matt Bourne Logo" />
     <span class="self-center text-2xl text-gray-900 font-semibold whitespace-nowrap ml-1 lg:block hidden">Matt Bourne<p class="text-xs text-gray-500">Web Developer</p></span>
 
 </a>
