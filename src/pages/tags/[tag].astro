@@ -20,9 +20,9 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<BaseLayout pageTitle={tag}>
-  <p>Posts tagged with {tag}</p>
-  <ul>
-    {posts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
-  </ul>
+<BaseLayout pageTitle="Post Archive" pageIntro={`Posts tagged with ${tag}`}>
+    <div class="lg:mt-12 mt-6 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+        {posts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate)).map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags} date={post.frontmatter.pubDate}/>)}
+    </div>  
 </BaseLayout>
+

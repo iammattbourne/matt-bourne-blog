@@ -1,19 +1,25 @@
 ---
 import Social from './Social.astro';
 ---
-<style>
-    footer {
-      display: flex;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
-
-<footer>
-    <Social platform="twitter" username="astrodotbuild" />
-    <Social platform="github" username="withastro" />
-    <Social platform="youtube" username="astrodotbuild" />
+<footer class="mx-4">
+    <div class="py-8 max-w-7xl mx-auto mt-6 border-t-2 border-gray-200 pt-5 text-center lg:text-left">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="block mt-1 text-sm leading-6 text-gray-500">© 2023 Matt Bourne - All Rights Reserved.</span>
+            <ul class="flex flex-wrap items-center lg:mt-1 mt-3 justify-center lg:justify-end">
+                <li>
+                    <a class="lg:p-1 p-3 lg:px-4 text-xl leading-6 text-gray-500 hover:text-brand-blue transition ease-in-out duration-150" href="mailto:hello@mattbourne.co.uk"><i class="fa-solid fa-envelope"></i></a>
+                </li>
+                <Social platform="twitter" username="astrodotbuild" />
+                <Social platform="github" username="withastro" />
+                <Social platform="codepen" username="astrodotbuild" />
+            </ul>
+        </div>
+    </div>
 </footer>
+
+
+
+
 <script>
 	declare global {
 		interface Window {
