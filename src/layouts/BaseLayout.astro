@@ -2,6 +2,7 @@
 import '../styles/output.css';
 
 import Header from '../components/Header.astro';
+import PageTitle from '../components/PageTitle.astro';
 import Footer from '../components/Footer.astro';
 
 const { pageTitle, pageIntro } = Astro.props;
@@ -20,10 +21,7 @@ const { pageTitle, pageIntro } = Astro.props;
 	<body class="bg-white">
 		<Header />
         <section class="lg:pt-4 pt-3 pb-8 px-4 sm:px-4 lg:px-6 max-w-7xl mx-auto">
-            <div class="text-center max-w-2xl mx-auto">
-                <h1 class="lg:text-4xl text-2xl leading-10 tracking-tight font-extrabold text-gray-900">{pageTitle}</h1>
-                <p class="lg:mt-5 mt-2 lg:text-xl text-base lg:leading-7 leading-6 text-gray-500 ">{pageIntro}</p>
-            </div> 
+            <PageTitle pageTitle={pageTitle} pageIntro={pageIntro}/>
             <slot />
         </section>
 		<Footer />
