@@ -4,11 +4,12 @@ import BlogPost from '../../components/BlogPost.astro'
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob('../posts/*.md');
-  
-  const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+  const formattedPosts = allPosts.sort((a, b) => Date.parse(a.frontmatter.pubDate) - Date.parse(b.frontmatter.pubDate)).reverse();
+
+  const uniqueTags = [...new Set(formattedPosts.map((post) => post.frontmatter.tags).flat())];
 
   return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+    const filteredPosts = formattedPosts.filter((post) => post.frontmatter.tags.includes(tag));
     return {
       params: { tag },
       props: { posts: filteredPosts },
@@ -20,8 +21,10 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
+
+
 <BaseLayout pageTitle="Post Archive" pageIntro={`Posts tagged with ${tag}`}>
-    <div class="lg:my-12 my-5 grid gap-10 max-w-lg lg:max-w-none mx-auto lg:grid-cols-3">
-        {posts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate)).map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags} date={post.frontmatter.pubDate}/>)}
+    <div class="lg:my-12 my-5 grid gap-10 max-w-lg lg:max-w-none mx-auto px-2 lg:grid-cols-3">
+        {posts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags} date={post.frontmatter.pubDate}/>)}
     </div>  
 </BaseLayout>
