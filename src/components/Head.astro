@@ -1,0 +1,13 @@
+---
+const { pageTitle } = Astro.props;
+---
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"  rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle} | Matt Bourne</title>
+    <script is:inline src="https://kit.fontawesome.com/442ee84739.js" crossorigin="anonymous"></script>
+</head>

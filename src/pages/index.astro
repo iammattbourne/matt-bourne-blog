@@ -1,18 +1,20 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import Home from "../layouts/Home.astro";
+
+const pageTitle = "Matt Bourne - Web Developer";
 ---
 
-<BaseLayout>
+<Home pageTitle={pageTitle}>
 	<section class="flex items-center w-full lg:min-h-[calc(100vh-300px)] min-h-[calc(100vh-250px)]">
 		<div class="flex items-center justify-between flex-col-reverse lg:flex-row w-full">
 			<div class="textholder w-full lg:w-1/2 mx-auto text-center lg:text-left lg:mt-0 mt-6">
-				<h1 class="w-full font-bold text-6xl lg:text-8xl">Matt Bourne</h1>
-				<p class="mt-2 mb-4 lg:text-2xl text-xl font-light text-gray-500">An accomplished and enthusiastic web developer based in Worcester, currently working in the creative arts sector.</p>
+				<h1 class="w-full font-bold text-6xl lg:text-8xl text-gray-900 font-heading">Matt Bourne</h1>
+				<p class="mt-2 mb-4 lg:text-2xl text-xl font-light text-gray-500 max-w-xl lg:max-w-none mx-auto">An accomplished and enthusiastic web developer based in Worcester, currently working in the creative arts sector.</p>
 				<a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-brand-blue hover:bg-brand-blue-light focus:ring-4 focus:ring-primary-300 transition ease-in-out duration-150">
-					About Me
+					Download CV
 				</a>
 				<a href="mailto:hello@mattbourne.co.uk" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-brand-blue hover:text-white focus:ring-4 focus:ring-gray-100 transition ease-in-out duration-150">
-					Let's Talk
+					Get in Touch
 				</a> 
 			</div>
 			<div class="imageHolder w-full lg:w-1/2">
@@ -21,4 +23,4 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		</div>
 	</section>
 	<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</BaseLayout>
+</Home>

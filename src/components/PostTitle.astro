@@ -1,7 +1,7 @@
 ---
-const { pageTitle, pageIntro} = Astro.props;
+const { pageTitle, publishedDate } = Astro.props;
 ---
 <div class="w-full text-center mx-auto">
     <h1 class="w-full font-bold text-6xl leading-loose lg:text-4xl text-gray-900 font-heading mb-4">{pageTitle}</h1>
-    <p class="lg:text-2xl text-xl font-light text-gray-500 max-w-xl lg:max-w-none mx-auto">{pageIntro}</p>
+    <p class="lg:text-2xl text-xl font-light text-gray-500 max-w-xl lg:max-w-none mx-auto">Published on {publishedDate}</p>
 </div> 

@@ -4,16 +4,16 @@ import '../styles/output.css';
 import Head from '../components/Head.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import PageTitle from '../components/PageTitle.astro';
+import PostTitle from '../components/PostTitle.astro';
 
-const { pageTitle, pageIntro } = Astro.props;
+const { pageTitle, publishedDate } = Astro.props;
 ---
 <html lang="en">
 	<Head pageTitle={pageTitle}/>
 	<body class="bg-white">
 		<Header />
         <section class="lg:py-4 py-2 px-2 lg:px-4 max-w-7xl mx-auto font-body">
-            <PageTitle pageTitle={pageTitle} pageIntro={pageIntro}/>
+			<PostTitle pageTitle={pageTitle} publishedDate={publishedDate}/>
             <slot />
         </section>
 		<Footer />

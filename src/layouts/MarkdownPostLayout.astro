@@ -1,34 +1,33 @@
 ---
-import BaseLayout from './BaseLayout.astro';
+import PostLayout from './PostLayout.astro';
 const { frontmatter } = Astro.props;
 
 import {formatDate} from '../scripts/dateFormat';
 --- 
-<BaseLayout pageTitle={frontmatter.title} pageIntro={frontmatter.description}>
+<PostLayout pageTitle={frontmatter.title} publishedDate={formatDate(frontmatter.pubDate)}>
     <section class="blogContent my-8">
-        <img class="h-96 w-full object-cover" src={frontmatter.image.url} width="100%" alt={frontmatter.image.alt} /> 
-        <div class="blogMeta mt-8 mb-6">
-            <div class="tags inline-flex justify-between">
-                <p class="text-sm leading-5 text-gray-500 mr-1">Category:</p>
+        <img class="h-96 w-full object-contain" src={frontmatter.image.url} width="100%" alt={frontmatter.image.alt} /> 
+        <div class="blogMeta mt-8 mb-6 text-center">
+            <div class="tags inline-flex justify-center flex-end">
+                <p class="text-base leading-5 text-gray-500 mr-1">Category:</p>
                 {frontmatter.tags.map((tag) => (
                     <a href={`/tags/${tag}`}>
-                        <p class="tag text-sm leading-5 font-medium text-brand-blue hover:text-brand-blue-light transition ease-in-out duration-150">
+                        <p class="tag text-base leading-5 font-semibold text-brand-blue hover:text-brand-blue-light transition ease-in-out duration-150">
                             {tag}
                         </p>
                     </a>
                 ))}
             </div>
-            <p class="text-sm leading-5 text-gray-500">Published on: <span class="text-sm leading-5 font-medium text-brand-blue">{formatDate(frontmatter.pubDate)}</span></p>
         </div>
         <slot />
-        <div class="blogFooter text-center mt-8">
+        <div class="blogFooter text-center mt-8 mb-6">
             <div class="backButton">
                 <a href=/blog>
-                    <p class="inline-flex items-center text-sm leading-5 font-medium text-brand-blue hover:text-brand-blue-light transition ease-in-out duration-150">
+                    <p class="inline-flex items-center text-base leading-5 font-semibold text-brand-blue hover:text-brand-blue-light transition ease-in-out duration-150">
                         <i class="mr-2 fa-solid fa-arrow-left"></i> Back to the blog
                     </p>
                 </a>
             </div>
         </div>
     </section>
-</BaseLayout>
+</PostLayout>

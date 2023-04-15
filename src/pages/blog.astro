@@ -4,11 +4,10 @@ import BlogPost from '../components/BlogPost.astro';
 
 const allPosts = await Astro.glob('../pages/posts/*.md');
 const pageTitle = "My Blog";
-const pageIntro = "This is where I can share my thoughts and ideas with you all"
+const pageIntro = "Documenting my career and unlocking my creativity one step at a time"
 ---
-
 <BaseLayout pageTitle={pageTitle} pageIntro={pageIntro}>
-    <div class="lg:my-12 my-4 grid gap-10 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+    <div class="lg:my-12 my-4 grid gap-10 max-w-lg lg:max-w-none mx-auto lg:grid-cols-3">
         {allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate)).map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags} date={post.frontmatter.pubDate} />)}   
     </div>  
 </BaseLayout>
