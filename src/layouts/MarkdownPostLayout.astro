@@ -5,7 +5,7 @@ const { frontmatter } = Astro.props;
 import {formatDate} from '../scripts/dateFormat';
 --- 
 <PostLayout pageTitle={frontmatter.title} publishedDate={formatDate(frontmatter.pubDate)}>
-    <section class="blogContent my-8">
+    <section class="blogContent my-8 lg:mx-0 mx-2">
         <img class="h-96 w-full object-contain" src={frontmatter.image.url} width="100%" alt={frontmatter.image.alt} /> 
         <div class="blogMeta mt-8 mb-6 text-center">
             <div class="tags inline-flex justify-center flex-end">
