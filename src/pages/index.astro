@@ -3,21 +3,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-	<section>
-		<div class="grid max-w-screen-xl px-4 py-1 mx-auto lg:gap-8 xl:gap-0 lg:py-2 lg:grid-cols-12">
-			<div class="mr-auto place-self-center lg:col-span-6">
-				<h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Hi, I'm Matt!</h1>
-				<p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit pellentesque enim elementum mollis. Aenean id aliquam ante, nec dignissim urna. Donec sodales lorem a arcu vulputate auctor. </p>
-				<a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-brand-blue hover:bg-brand-blue-light focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+	<section class="flex items-center w-full lg:min-h-[calc(100vh-300px)] min-h-[calc(100vh-200px)]">
+		<div class="flex items-center justify-between flex-col-reverse lg:flex-row w-full">
+			<div class="textholder w-full lg:w-1/2 mx-auto text-center lg:text-left lg:mt-0 mt-6">
+				<h1 class="w-full font-bold text-6xl lg:text-8xl">Matt Bourne</h1>
+				<p class="mt-2 mb-4 lg:text-2xl text-xl font-light text-gray-500">An accomplished and enthusiastic web developer based in Worcester, currently working in the creative arts sector.</p>
+				<a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-brand-blue hover:bg-brand-blue-light focus:ring-4 focus:ring-primary-300 transition ease-in-out duration-150">
 					About Me
 				</a>
-				<a href="mailto:hello@mattbourne.co.uk" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-					Get in Touch
+				<a href="mailto:hello@mattbourne.co.uk" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-brand-blue hover:text-white focus:ring-4 focus:ring-gray-100 transition ease-in-out duration-150">
+					Let's Talk
 				</a> 
 			</div>
-			<div class="mt-0 lg:col-span-6 lg:flex">
-				<img src="https://substrakt.com/images/Headshots/Team_Matt.jpg" alt="mockup">
-			</div>                
+			<div class="imageHolder w-full lg:w-1/2">
+				<img class="mx-auto" src="https://www.mattbournemedia.co.uk/wp-content/uploads/2022/07/imageedit_1_4185277360-650x432.png" alt="mockup">
+			</div>
 		</div>
 	</section>
 	<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
