@@ -14,7 +14,7 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 
 const allPosts = await Astro.glob('../posts/*.md');
-const pageTitle = "My Pagination Test";
+const pageTitle = "My Blog";
 const pageIntro = "Documenting my career and unlocking my creativity one step at a time"
 const pathname = new URL(Astro.request.url).pathname.split('/');
 const firstPath = pathname[1];
