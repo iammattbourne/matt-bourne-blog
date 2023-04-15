@@ -21,7 +21,7 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle="Post Archive" pageIntro={`Posts tagged with ${tag}`}>
-    <div class="lg:my-12 my-4 grid gap-10 max-w-lg lg:max-w-none mx-auto lg:grid-cols-3">
+    <div class="lg:my-12 my-5 grid gap-10 max-w-lg lg:max-w-none mx-auto lg:grid-cols-3">
         {posts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate)).map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags} date={post.frontmatter.pubDate}/>)}
     </div>  
 </BaseLayout>
