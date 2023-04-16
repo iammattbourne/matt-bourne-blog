@@ -12,7 +12,7 @@ const { pageTitle, publishedDate } = Astro.props;
 	<Head pageTitle={pageTitle}/>
 	<body class="bg-white">
 		<Header />
-        <section class="lg:py-4 py-2 px-2 lg:px-4 max-w-7xl mx-auto font-body">
+        <section class="lg:py-4 py-2 px-4 max-w-7xl mx-auto font-body">
 			<PostTitle pageTitle={pageTitle} publishedDate={publishedDate}/>
             <slot />
         </section>
