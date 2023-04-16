@@ -1,11 +1,12 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
+featured_image:
+  src: src/assets/pexels-photo-3408744.jpeg
+  alt: Test image alt text
+  title: Test image title text
 title: This is a test
 description: This is a test new blog
 pubDate: 2022-08-08
-image: 
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word “astro” against an illustration of planets and stars."
 tags: ["Astro"]
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse erat sem, faucibus eu sollicitudin vel, auctor sit amet velit. Nunc volutpat velit ac condimentum malesuada. Pellentesque fringilla eget nunc a pulvinar. Proin volutpat nec odio a lobortis. Proin vel posuere arcu. Nunc vel congue orci. Sed pulvinar hendrerit facilisis.

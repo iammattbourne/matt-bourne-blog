@@ -22,7 +22,7 @@ const firstPath = pathname[1];
 
 <BaseLayout pageTitle={pageTitle} pageIntro={pageIntro}>
     <div class="lg:my-12 my-8 grid gap-10 max-w-lg lg:max-w-none mx-auto lg:grid-cols-3">
-        {page.data.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags} date={post.frontmatter.pubDate} />)}   
+        {page.data.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags} date={post.frontmatter.pubDate} featuredImageSRC={post.frontmatter.featured_image.src} featuredImageAlt={post.frontmatter.featured_image.alt}/>)}      
     </div>  
     {allPosts.length > 3 ? (
       <div class="mt-4">

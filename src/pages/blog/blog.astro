@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPost from '../../components/BlogPost.astro';
+
+const allPosts = await Astro.glob('../posts/*.md');
+const formattedPosts = allPosts.sort((a, b) => Date.parse(a.frontmatter.pubDate) - Date.parse(b.frontmatter.pubDate)).reverse();
+
+const pageTitle = "My Blog";
+const pageIntro = "Documenting my career and unlocking my creativity one step at a time"
+---
+<BaseLayout pageTitle={pageTitle} pageIntro={pageIntro}>
+    <div class="lg:my-12 my-5 grid gap-10 max-w-lg lg:max-w-none mx-auto lg:grid-cols-3">
+        {formattedPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags} date={post.frontmatter.pubDate} featuredImageSRC={post.frontmatter.featured_image.src} featuredImageAlt={post.frontmatter.featured_image.alt}/>)}   
+    </div>  
+</BaseLayout>

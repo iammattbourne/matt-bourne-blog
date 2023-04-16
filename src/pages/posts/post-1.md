@@ -1,12 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
+featured_image:
+  src: src/assets/pexels-photo-3408744.jpeg
+  alt: Test image alt text
+  title: Test image title text
 title: 'My First Blog Post'
 pubDate: 2022-07-01
 description: 'This is the first post of my new Astro blog.'
 author: 'Astro Learner'
-image:
-    url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg' 
-    alt: 'The Astro logo with the word One.'
 tags: ["Blogging"]
 ---
 # My First Blog Post
