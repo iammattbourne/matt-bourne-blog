@@ -13,20 +13,20 @@ import {formatDate} from '../scripts/dateFormat';
                 <div class="tags">
                     {tags.map((tag) => (
                         <a href={`/tags/${tag}`}>
-                            <p class="tag text-sm leading-4 font-semibold text-brand-blue hover:text-brand-blue-light transition ease-in-out duration-150">
+                            <p class="tag text-base leading-5 font-semibold text-brand-blue hover:text-brand-blue-light transition ease-in-out duration-150">
                                 {tag}
                             </p>
                         </a>
                     ))}
                 </div>
-                <span class="text-sm leading-4 text-gray-500">{formatDate(date)}</span>
+                <span class="text-base leading-5 text-gray-500">{formatDate(date)}</span>
             </div>
             <h2 class="mt-2 text-2xl leading-7 font-semibold text-gray-900 hover:text-gray-600 transition ease-in-out duration-150 font-heading"><a href={url}>{title}</a></h2>
             <p class="mt-1 text-sm leading-4 text-gray-500">{description}</p>
         </div>
         <div class="mt-5 flex justify-end">
             <a href={url}>
-                <p class="inline-flex items-center text-sm leading-5 font-semibold text-brand-blue hover:text-brand-blue-light transition ease-in-out duration-150">
+                <p class="inline-flex items-center text-base leading-5 font-semibold text-brand-blue hover:text-brand-blue-light transition ease-in-out duration-150">
                     Read more <i class="ml-2 fa-solid fa-arrow-right"></i>
                 </p>
             </a>
