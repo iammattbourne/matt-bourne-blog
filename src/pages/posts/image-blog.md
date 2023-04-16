@@ -1,10 +1,18 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Image Blog
-description: Testing
+featured_image:
+  src: /assets/pexels-photo-3408744.jpeg
+  alt: Test image alt text
+  title: Test image title text
 pubDate: 2022-07-01
-author: 'Astro Learner'
-tags: ["Astro"]
+author: Astro Learner
+title: Image Blog
+date: 2023-04-16T15:26:15.887Z
+tags:
+  - Astro
+description: Testing
+tag:
+  - astro
 image:
   url: https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
   alt: mountain image
