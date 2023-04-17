@@ -3,6 +3,8 @@ const { title, description, url, date, tags, featuredImageSRC, featuredImageAlt 
 
 import { formatDate } from '../scripts/dateFormat';
 import { Image } from 'astro:assets'
+import { getCollection } from "astro:content";
+const allBlogPosts = await getCollection("blog");
 ---
 
 
