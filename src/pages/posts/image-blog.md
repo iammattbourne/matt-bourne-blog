@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 featured_image:
-  src: src/assets/pexels-photo-3408744.jpeg
-  alt: Test image alt text
-  title: Test image title text
+  src: /assets/forestimage.jpeg
+  alt: This is a forest
+  title: Forest Image
 pubDate: 2022-07-01
 author: Astro Learner
 title: Image Blog
