@@ -9,7 +9,13 @@ import { Image } from 'astro:assets'
 
 <article class="flex flex-col rounded-lg shadow-lg overflow-hidden lg:mx-0 mx-2">
     <div class="flex-shrink-0">
-        <img class="h-48 w-full object-cover" width="100%" height="auto" src={featuredImageSRC} alt={featuredImageAlt}>
+        <Image
+  src={featuredImageSRC}
+  width={300}
+  height={300}
+  alt={featuredImageAlt}
+/>
+       
     </div>
 
     <p>{featuredImageSRC}</p>
