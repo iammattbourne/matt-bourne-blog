@@ -1,12 +1,11 @@
 ---
 const { title, description, url, date, tags, featuredImageSRC, featuredImageAlt  } = Astro.props;
-const { frontmatter } = Astro.props;
 
 import { formatDate } from '../scripts/dateFormat';
 ---
 <article class="flex flex-col rounded-lg shadow-lg overflow-hidden lg:mx-0 mx-2">
     <div class="flex-shrink-0">
-        <img class="h-48 w-full object-cover" width="100%" height="auto" src={featuredImageSRC} alt={featuredImageAlt}>
+        <img class="h-48 w-full object-cover" width="100%" height="auto" src="/assets/images/featured-image1.jpeg" alt={featuredImageAlt}>
     </div>
     <div class="flex-1 bg-white px-4 pt-4 pb-5 flex flex-col justify-between">
         <div class="main flex flex-col">
