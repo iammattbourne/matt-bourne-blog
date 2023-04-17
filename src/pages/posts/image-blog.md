@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 featured_image:
-  src: /assets/forestimage.jpeg
+  src: ./forestimage.jpeg
   alt: This is a forest
   title: Forest Image
 pubDate: 2022-07-01
