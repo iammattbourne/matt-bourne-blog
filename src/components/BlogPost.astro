@@ -1,20 +1,29 @@
 ---
 const { title, description, url, date, tags, featuredImageSRC, featuredImageAlt  } = Astro.props;
-const images = await Astro.glob('../assets/*');
+
+const images = await Astro.glob("../assets/*").then(files => {
+  return files.map(file => file.default);
+});
+
 import { formatDate } from '../scripts/dateFormat';
-import { Image } from 'astro:assets'
+
 ---
-
-
-
+  
 <article class="flex flex-col rounded-lg shadow-lg overflow-hidden lg:mx-0 mx-2">
     <div class="flex-shrink-0">
-        <Image
-  src={featuredImageSRC}
-  width={300}
-  height={300}
-  alt={featuredImageAlt}
-/>
+        {
+            images.map(({src}) => (
+              <div class="flex items-center justify-center">
+                <img
+                  class="object-contain h-full rounded-lg"
+                  src={src}
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+            ))
+          }
+    
        
     </div>
 
