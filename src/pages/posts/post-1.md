@@ -6,15 +6,16 @@ featured_image:
   title: Test image title text
 layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: 2022-07-01
-author: Astro Learner
-title: My First Blog Post
 description: This is the first post of my new Astro blog.
-date: 2023-04-18T20:03:28.355Z
 tag:
   - test blog
 featuredImageTitle: flowers
+author: Astro Learner
+title: My First Blog Post
+date: 2023-04-18T20:03:28.355Z
 tags:
   - Blogging
+featuredImageAlt: This is a picture of a flower
 ---
 # My First Blog Post
 
