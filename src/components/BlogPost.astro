@@ -1,31 +1,25 @@
 ---
 const { title, description, url, date, tags, featuredImageSRC, featuredImageAlt  } = Astro.props;
 
-const images = await Astro.glob("../assets/*").then(files => {
-  return files.map(file => file.default);
-});
+const defaultImage = '../images/default.png';
+const images = import.meta.glob<ImageMetadata>('../assets/*', { import: 'default' });
+    const imagesrc = await images[featuredImageSRC || defaultImage]();
 
 import { formatDate } from '../scripts/dateFormat';
 
 ---
   
 <article class="flex flex-col rounded-lg shadow-lg overflow-hidden lg:mx-0 mx-2">
-    <div class="flex-shrink-0">
-        {
-            images.map(({src}) => (
-              <div class="flex items-center justify-center">
-                <img
-                  class="object-contain h-full rounded-lg"
-                  src={src}
-                  alt=""
-                  loading="lazy"
-                />
-              </div>
-            ))
-          }
-    
-       
-    </div>
+    <Image
+  src={imagesrc}
+  width={300}
+  height={300}
+  alt={featuredImageAlt}
+/>
+
+
+
+   
 
     <p>{featuredImageSRC}</p>
     <div class="flex-1 bg-white px-4 pt-4 pb-5 flex flex-col justify-between">
