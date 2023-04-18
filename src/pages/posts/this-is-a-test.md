@@ -4,7 +4,7 @@ featured_image:
   src: src/assets/pexels-photo-3408744.jpeg
   alt: Test image alt text
   title: Test image title text
-title: This is a test
+title: forestImage
 description: This is a test new blog
 pubDate: 2022-08-08
 tags: ["Astro"]
