@@ -12,7 +12,7 @@ description: This is the first post of my new Astro blog.
 date: 2023-04-18T20:03:28.355Z
 tag:
   - test blog
-featureImageTitle: flowers
+featuredImageTitle: flowers
 tags:
   - Blogging
 ---

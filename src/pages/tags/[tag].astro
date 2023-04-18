@@ -22,6 +22,6 @@ const { posts } = Astro.props;
 ---
 <BaseLayout pageTitle="Post Archive" pageIntro={`Posts tagged with ${tag}`}>
     <div class="lg:my-12 my-5 grid gap-10 max-w-lg lg:max-w-none mx-auto px-2 lg:grid-cols-3">
-        {posts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags} date={post.frontmatter.pubDate} featuredImageSRC={post.frontmatter.featured_image.src} featuredImageAlt={post.frontmatter.featured_image.alt} />)}
+        {posts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags} date={post.frontmatter.pubDate} featuredImageTitle={post.frontmatter.featuredImageTitle} featuredImageAlt={post.frontmatter.featuredImageAlt} />)}
     </div>  
 </BaseLayout>

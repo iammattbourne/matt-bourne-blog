@@ -21,5 +21,5 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tag", widget: "select", multiple: true, options: ["astro", "test blog", "another taxonomy"]}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Featured Image Title", name: "featureImageTitle", widget: "string"}
-      - {label: "Featured Image Alt Text", name: "featureImageAlt", widget: "string"}
+      - {label: "Featured Image Title", name: "featuredImageTitle", widget: "string"}
+      - {label: "Featured Image Alt Text", name: "featuredImageAlt", widget: "string"}
