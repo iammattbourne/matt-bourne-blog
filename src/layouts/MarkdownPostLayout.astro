@@ -7,7 +7,6 @@ import {formatDate} from '../scripts/dateFormat';
 --- 
 <PostLayout pageTitle={frontmatter.title} publishedDate={formatDate(frontmatter.pubDate)}>
     <section class="blogContent my-8 lg:mx-0 mx-2">
-        <img class="lg:max-h-96 max-h-48 object-contain" width="100%" height="auto" src={frontmatter.featured_image.src} alt={frontmatter.featured_image.alt}>
         <div class="blogMeta mt-8 mb-6 text-center">
             <div class="tags inline-flex justify-center flex-end">
                 <p class="text-base leading-5 text-gray-500 mr-1">Category:</p>
