@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-pubDate: 2022-07-04
-title: Blog post 4
+pubDate: 2022-07-06
+title: Blog post 6
 description: Testing
 tag:
   - astro
