@@ -1,14 +1,20 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+featureImageAlt: This is an image of flowers
 featured_image:
   src: src/assets/pexels-photo-3408744.jpeg
   alt: Test image alt text
   title: Test image title text
-title: 'My First Blog Post'
+layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: 2022-07-01
-description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
-tags: ["Blogging"]
+author: Astro Learner
+title: My First Blog Post
+description: This is the first post of my new Astro blog.
+date: 2023-04-18T20:03:28.355Z
+tag:
+  - test blog
+featureImageTitle: flowers
+tags:
+  - Blogging
 ---
 # My First Blog Post
 
