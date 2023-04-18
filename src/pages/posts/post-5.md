@@ -1,23 +1,15 @@
 ---
-featured_image:
-  src: ./forestimage.jpeg
-  alt: This is a forest
-  title: Forest Image
 layout: ../../layouts/MarkdownPostLayout.astro
-pubDate: 2022-07-01
-title: Image Blog
+pubDate: 2022-07-05
+title: Blog post 5
 description: Testing
 tag:
   - astro
-featuredImageTitle: flowers
 author: Astro Learner
 date: 2023-04-16T15:26:15.887Z
 tags:
   - Astro
-image:
-  url: https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
-  alt: mountain image
-  title: Test blog mountain image
+featuredImageTitle: flowers
 featuredImageAlt: This is another flower image
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse erat sem, faucibus eu sollicitudin vel, auctor sit amet velit. Nunc volutpat velit ac condimentum malesuada. Pellentesque fringilla eget nunc a pulvinar. Proin volutpat nec odio a lobortis. Proin vel posuere arcu. Nunc vel congue orci. Sed pulvinar hendrerit facilisis.
