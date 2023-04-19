@@ -8,7 +8,7 @@ export async function getStaticPaths({ paginate }) {
     const formattedPosts = allPosts.sort((a, b) => Date.parse(a.frontmatter.pubDate) - Date.parse(b.frontmatter.pubDate)).reverse();
 
   return paginate(formattedPosts, {
-    pageSize: 3,
+    pageSize: 6,
   })
 }
 const { page } = Astro.props;
@@ -24,7 +24,7 @@ const firstPath = pathname[1];
     <div class="lg:my-12 my-8 grid gap-10 max-w-lg lg:max-w-none mx-auto lg:grid-cols-3">
         {page.data.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags} date={post.frontmatter.pubDate} imageTitle={post.frontmatter.featuredImageTitle} imageAlt={post.frontmatter.featuredImageAlt}/>)}      
     </div>  
-    {allPosts.length > 3 ? (
+    {allPosts.length > 6 ? (
       <div class="mt-4">
         <Pagination length={page.lastPage} 
           currentUrl={page.url.current} 
