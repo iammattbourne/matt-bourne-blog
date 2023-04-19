@@ -5,7 +5,7 @@ import PostLayout from './PostLayout.astro';
 import {formatDate} from '../scripts/dateFormat';
 
 --- 
-<PostLayout pageTitle={frontmatter.title} publishedDate={formatDate(frontmatter.pubDate)}>
+<PostLayout pageTitle={frontmatter.title} publishedDate={formatDate(frontmatter.pubDate)} imageTitle={frontmatter.featuredImageTitle} imageAlt={frontmatter.featuredImageAlt}>
     <section class="blogContent my-8 lg:mx-0 mx-2">
         <div class="blogMeta mt-8 mb-6 text-center">
             <div class="tags inline-flex justify-center flex-end">

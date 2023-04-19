@@ -6,7 +6,7 @@ const paginationList = Array.from({length: `${length}`}, (_, i) => i + 1);
 <nav aria-label="Blog pages" class="pagination pagination-default text-center lg:py-6 py-4">
     { prevUrl ? (
         <a href={prevUrl} class="pagination__link text-medium leading-5 font-semibold text-brand-blue hover:text-brand-blue-light transition ease-in-out duration-150">
-            <i class="mr-2 fa-solid fa-arrow-left"></i>
+            <i class="mr-3 fa-solid fa-arrow-left"></i>
         </a>
     ) : (
         <span class="pagination__link disabled"></span>        
@@ -24,7 +24,7 @@ const paginationList = Array.from({length: `${length}`}, (_, i) => i + 1);
         <span class="pagination__link disabled"></span>
     ) : (
         <a href={nextUrl} class="pagination__link text-medium leading-5 font-semibold text-brand-blue hover:text-brand-blue-light transition ease-in-out duration-150">
-            <i class="ml-2 fa-solid fa-arrow-right"></i>
+            <i class="ml-3 fa-solid fa-arrow-right"></i>
         </a>
     )}
 </nav>
