@@ -1,15 +1,19 @@
 ---
 import Home from "../layouts/Home.astro";
+import BlogPost from '../components/BlogPost.astro';
+import { recentBlogPosts } from "../scripts/recentBlogPosts.js";
 
 const pageTitle = "Matt Bourne - Web Developer";
+const allPosts = await Astro.glob('./posts/*.md');
+const recentPosts = recentBlogPosts(allPosts, {limit: 3,});
 ---
 
 <Home pageTitle={pageTitle}>
-	<section class="flex items-center w-full lg:min-h-[calc(100vh-300px)] min-h-[calc(100vh-250px)]">
+	<section class="flex items-center w-full lg:min-h-[calc(100vh-300px)] min-h-[calc(100vh-250px)] bg-white lg:py-4 py-2 px-4 max-w-7xl mx-auto font-body">
 		<div class="flex items-center justify-between flex-col-reverse lg:flex-row w-full">
 			<div class="textholder w-full lg:w-1/2 mx-auto text-center lg:text-left lg:mt-0 mt-6">
 				<h1 class="w-full font-bold text-6xl lg:text-8xl text-gray-900 font-heading">Matt Bourne</h1>
-				<p class="mt-2 mb-5 lg:text-2xl text-xl  font-light text-gray-500 max-w-xl lg:max-w-none mx-auto">A curious and enthusiastic web developer based in Worcester, currently working in the creative arts sector.</p>
+				<p class="mt-2 mb-5 lg:text-2xl text-xl font-light text-gray-500 max-w-xl lg:max-w-none mx-auto">A curious and enthusiastic web developer based in Worcester, currently working in the creative arts sector.</p>
 				<a href="/assets/documents/matt-bourne-cv.pdf" target="_blank" class="items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-brand-blue hover:bg-brand-blue-light focus:ring-4 focus:ring-primary-300 transition ease-in-out duration-150">
 					Download CV
 				</a>
@@ -21,6 +25,72 @@ const pageTitle = "Matt Bourne - Web Developer";
 				<img class="mx-auto" src={`/assets/images/mattBourneHeadshot.png`} alt="Matt Bourne headshot">
 			</div>
 		</div>
+	</section>
+	<section class="bg-brand-blue font-body">
+		<div class="px-4 lg:py-16 py-6 px-4 max-w-7xl mx-auto">
+			<h2 class="w-full text-center font-bold lg:text-6xl text-4xl leading-loose lg:text-4xl text-white font-heading lg:mb-12 mb-2">Companies I've Worked With</h2>
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-16 lg:my-8 my-4">
+				<div class="flex items-center justify-center">
+					<img src="/assets/images/logos/substrakt.svg" class="h-8 w-auto mx-auto object-center" alt="Matt Bourne Logo">
+				</div>
+				<div class="flex items-center justify-center">
+					<img src="/assets/images/logos/worcester-web-studio.svg" class="h-16 w-auto mx-auto align-middle" alt="Matt Bourne Logo">
+				</div>
+				<div class="flex items-center justify-center">
+					<img src="/assets/images/logos/thursfields.svg" class="h-6 w-auto mx-auto align-middle" alt="Matt Bourne Logo">
+				</div>
+				<div class="flex items-center justify-center">
+					<img src="/assets/images/logos/gadget-show.svg" class="h-16 w-auto mx-auto align-middle" alt="Matt Bourne Logo">
+				</div>
+				<div class="flex items-center justify-center">
+					<img src="/assets/images/logos/sadlers-wells.svg" class="h-24 w-auto mx-auto align-middle" alt="Matt Bourne Logo">
+				</div>
+				<div class="flex items-center justify-center">
+					<img src="/assets/images/logos/birmingham-city-university.svg" class="h-14 w-auto mx-auto align-middle" alt="Matt Bourne Logo">
+				</div>
+				<div class="flex items-center justify-center">
+					<img src="/assets/images/logos/birmingham-hippodrome.svg" class="h-28 w-auto mx-auto align-middle" alt="Matt Bourne Logo">
+				</div>
+				<div class="flex items-center justify-center">
+					<img src="/assets/images/logos/aegon.svg" class="h-16 w-auto mx-auto align-middle" alt="Matt Bourne Logo">
+				</div>
+				<div class="flex items-center justify-center">
+					<img src="/assets/images/logos/resource-group.svg" class="h-16 w-auto mx-auto align-middle" alt="Matt Bourne Logo">
+				</div>
+				<div class="flex items-center justify-center">
+					<img src="/assets/images/logos/pets-at-home.svg" class="h-16 w-auto mx-auto align-middle" alt="Matt Bourne Logo">
+				</div>
+				<div class="flex items-center justify-center">
+					<img src="/assets/images/logos/sky.svg" class="h-16 w-auto mx-auto align-middle" alt="Matt Bourne Logo">
+				</div>
+				<div class="flex items-center justify-center">
+					<img src="/assets/images/logos/marks-and-spencers.svg" class="h-16 w-auto mx-auto align-middle" alt="Matt Bourne Logo">
+				</div>
+				
+				
+			</div>
+		</div>
+	</section>
+	<section id="recentBlogPosts" class="bg-white lg:py-16 py-6 px-4 max-w-7xl mx-auto font-body">
+		<h2 class="w-full text-center font-bold lg:text-6xl text-4xl leading-loose lg:text-4xl text-gray-900 font-heading lg:mb-4 mb-2">Recent Blog Posts</h2>
+		<div class="lg:my-12 my-8 grid gap-10 max-w-lg lg:max-w-none mx-auto lg:grid-cols-3">
+			{
+				recentPosts.map((post) => (
+				<BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags} date={post.frontmatter.pubDate} imageTitle={post.frontmatter.featuredImageTitle} imageAlt={post.frontmatter.featuredImageAlt}
+				/>
+		
+				))
+			}
+		</div>
+		<div class="blogFooter text-center mt-8 mb-6">
+            <div class="recentButton">
+                <a href=/blog>
+                    <p class="inline-flex items-center text-base leading-5 font-semibold text-brand-blue hover:text-brand-blue-light transition ease-in-out duration-150">
+                        View All Posts <i class="ml-2 fa-solid fa-arrow-right"></i>
+                    </p>
+                </a>
+            </div>
+        </div>
 	</section>
 	<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </Home>
