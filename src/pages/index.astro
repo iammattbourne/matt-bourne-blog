@@ -9,7 +9,7 @@ const recentPosts = recentBlogPosts(allPosts, {limit: 3,});
 ---
 
 <Home pageTitle={pageTitle}>
-	<section class="flex items-center w-full lg:min-h-[calc(100vh-80px)] min-h-[calc(100vh-650px)] bg-white pt-4 lg:pb-16 pb-12 px-4 max-w-7xl mx-auto font-body">
+	<section class="flex items-center w-full bg-white pt-8 lg:pb-16 pb-12 px-4 max-w-7xl mx-auto font-body">
 		<div class="flex items-center justify-between flex-col-reverse lg:flex-row w-full">
 			<div class="textholder w-full lg:w-1/2 mx-auto text-center lg:text-left lg:mt-0 mt-6">
 				<h1 class="w-full font-bold text-6xl lg:text-8xl text-gray-900 font-heading">Matt Bourne</h1>
@@ -26,9 +26,9 @@ const recentPosts = recentBlogPosts(allPosts, {limit: 3,});
 			</div>
 		</div>
 	</section>
-	<section class="bg-white dark:bg-gray-900 px-4 lg:py-16 py-12 px-4 max-w-7xl mx-auto font-body">
+	<section class="bg-white dark:bg-gray-900 px-4 py-16 px-4 max-w-7xl mx-auto font-body">
 		<div class="gap-16 items-center lg:grid lg:grid-cols-2">
-			<div class="grid grid-cols-2 gap-4 mt-8 lg:mb-0 mb-6">
+			<div class="grid grid-cols-2 gap-4 mt-8 lg:mb-0 mb-4">
 				<img class="w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1">
 				<img class="mt-4 w-full lg:mt-10 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" alt="office content 2">
 			</div>
@@ -40,8 +40,8 @@ const recentPosts = recentBlogPosts(allPosts, {limit: 3,});
 		</div>
 	</section>
 	<section class="bg-brand-blue font-body">
-		<div class="px-4 lg:py-16 py-12 px-4 max-w-7xl mx-auto font-body">
-			<h2 class="w-full text-center font-bold text-4xl leading-loose text-white font-heading lg:mb-12 mb-2">Companies I've Worked With</h2>
+		<div class="px-4 py-16 px-4 max-w-7xl mx-auto font-body">
+			<h2 class="w-full text-center font-bold text-4xl leading-10 text-white font-heading lg:mb-12 mb-2">Companies I've Worked With</h2>
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-16 my-8">
 				<div class="flex items-center justify-center">
 					<img src="/assets/images/logos/substrakt.svg" class="h-4 w-auto mx-auto object-center" alt="Matt Bourne Logo">
@@ -84,7 +84,7 @@ const recentPosts = recentBlogPosts(allPosts, {limit: 3,});
 			</div>
 		</div>
 	</section>
-	<section id="recentBlogPosts" class="bg-white lg:pt-16 pt-12 pb-4 px-4 max-w-7xl mx-auto font-body">
+	<section id="recentBlogPosts" class="bg-white pt-16 pb-4 px-4 max-w-7xl mx-auto font-body">
 		<h2 class="w-full text-center font-bold text-4xl leading-loose text-gray-900 font-heading lg:mb-4 mb-2">Recent Blog Posts</h2>
 		<div class="lg:my-12 my-8 grid gap-10 max-w-lg lg:max-w-none mx-auto lg:grid-cols-3">
 			{
