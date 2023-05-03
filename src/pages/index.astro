@@ -9,15 +9,15 @@ const recentPosts = recentBlogPosts(allPosts, {limit: 3,});
 ---
 
 <Home pageTitle={pageTitle}>
-	<section class="flex items-center w-full lg:min-h-[calc(100vh-500px)] min-h-[calc(100vh-850px)] bg-white pt-4 lg:pb-16 pb-12 px-4 max-w-7xl mx-auto font-body">
+	<section class="flex items-center w-full lg:min-h-[calc(100vh-80px)] min-h-[calc(100vh-650px)] bg-white pt-4 lg:pb-16 pb-12 px-4 max-w-7xl mx-auto font-body">
 		<div class="flex items-center justify-between flex-col-reverse lg:flex-row w-full">
 			<div class="textholder w-full lg:w-1/2 mx-auto text-center lg:text-left lg:mt-0 mt-6">
 				<h1 class="w-full font-bold text-6xl lg:text-8xl text-gray-900 font-heading">Matt Bourne</h1>
-				<p class="mt-2 mb-5 lg:text-2xl text-xl font-light text-gray-500 max-w-xl lg:max-w-none mx-auto">A curious and enthusiastic web developer based in Worcester, currently working in the creative arts sector.</p>
-				<a href="/assets/documents/matt-bourne-cv.pdf" target="_blank" class="items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-brand-blue hover:bg-brand-blue-light focus:ring-4 focus:ring-primary-300 transition ease-in-out duration-150">
+				<p class="mt-2 mb-5 lg:text-xl text-l font-light text-gray-500 max-w-xl lg:max-w-none mx-auto">A curious and enthusiastic web developer based in Worcester, currently working in the creative arts sector.</p>
+				<a href="/assets/documents/matt-bourne-cv.pdf" target="_blank" class="mr-2 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-brand-blue hover:bg-brand-blue-light focus:ring-4 focus:ring-primary-300 transition ease-in-out duration-150">
 					Download CV
 				</a>
-				<a href="mailto:hello@mattbourne.co.uk" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-brand-blue hover:text-white focus:ring-4 focus:ring-gray-100 transition ease-in-out duration-150">
+				<a href="mailto:hello@mattbourne.co.uk" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-brand-blue hover:text-white focus:ring-4 focus:ring-gray-100 transition ease-in-out duration-150">
 					Get in Touch
 				</a> 
 			</div>
@@ -28,7 +28,7 @@ const recentPosts = recentBlogPosts(allPosts, {limit: 3,});
 	</section>
 	<section class="bg-brand-blue font-body">
 		<div class="px-4 lg:py-16 py-12 px-4 max-w-7xl mx-auto font-body">
-			<h2 class="w-full text-center font-bold lg:text-6xl text-4xl leading-loose lg:text-4xl text-white font-heading lg:mb-12 mb-2">Companies I've Worked With</h2>
+			<h2 class="w-full text-center font-bold lg:text-4xl text-3xl leading-loose text-white font-heading lg:mb-12 mb-2">Companies I've Worked With</h2>
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-16 my-8">
 				<div class="flex items-center justify-center">
 					<img src="/assets/images/logos/substrakt.svg" class="h-4 w-auto mx-auto object-center" alt="Matt Bourne Logo">
@@ -72,7 +72,7 @@ const recentPosts = recentBlogPosts(allPosts, {limit: 3,});
 		</div>
 	</section>
 	<section id="recentBlogPosts" class="bg-white lg:pt-16 pt-12 pb-4 px-4 max-w-7xl mx-auto font-body">
-		<h2 class="w-full text-center font-bold lg:text-6xl text-4xl leading-loose lg:text-4xl text-gray-900 font-heading lg:mb-4 mb-2">Recent Blog Posts</h2>
+		<h2 class="w-full text-center font-bold lg:text-4xl text-3xl leading-loose text-gray-900 font-heading lg:mb-4 mb-2">Recent Blog Posts</h2>
 		<div class="lg:my-12 my-8 grid gap-10 max-w-lg lg:max-w-none mx-auto lg:grid-cols-3">
 			{
 				recentPosts.map((post) => (
