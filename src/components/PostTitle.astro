@@ -8,7 +8,7 @@ const { pageTitle, tags } = Astro.props;
             <p class="lg:text-xl text-l font-light text-gray-500 mr-1">Category:</p>
             {tags.map((tag) => (
                 <a href={`/tags/${tag}`}>
-                    <p class="lg:text-xl text-l leading-5 font-semibold text-brand-blue hover:text-brand-blue-light transition ease-in-out duration-150">
+                    <p class="lg:text-xl text-l lg:leading-5 leading-1 font-semibold text-brand-blue hover:text-brand-blue-light transition ease-in-out duration-150">
                         {tag}
                     </p>
                 </a>
