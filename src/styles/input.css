@@ -5,7 +5,11 @@
 
 
 ul.navMenu li a.active {
-    color: #1a56db
+    color: #1a56db;
+}
+
+pre.astro-code {
+    padding: 3px;
 }
 
 
