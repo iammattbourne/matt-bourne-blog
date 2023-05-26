@@ -7,7 +7,7 @@ import {formatDate} from '../scripts/dateFormat';
 --- 
 <PostLayout pageTitle={frontmatter.title} tags={frontmatter.tags} publishedDate={formatDate(frontmatter.pubDate)} imageTitle={frontmatter.featuredImageTitle} imageAlt={frontmatter.featuredImageAlt}>
     <section class="blogContent my-8 lg:mx-0 mx-2">
-        <article class="prose prose-mattBourne max-w-none text-gray-900">
+        <article class="prose prose-mattBourne max-w-none">
             <slot />
         </article>
         <div class="blogFooter text-center mt-8 mb-6">
