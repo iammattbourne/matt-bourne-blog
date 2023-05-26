@@ -3,7 +3,7 @@ import NavigationLinks from './NavigationLinks.astro';
 ---
 <div class="flex items-center lg:order-2 lg:hidden block" x-data="{ open: false }">
     <nav x-data="{ open: false }">
-        <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-1 text-gray-500 w-10 h-10 relative focus:outline-none bg-white" aria-controls="mobile-menu" aria-expanded="false" @click="open = !open">
+        <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-1 text-gray-600 w-10 h-10 relative focus:outline-none bg-white" aria-controls="mobile-menu" aria-expanded="false" @click="open = !open">
             <span class="sr-only">Open main menu</span>
             <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
                 <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>

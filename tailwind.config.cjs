@@ -10,7 +10,7 @@ module.exports = {
 		  'brand-blue': '#1a56db',
 		  'brand-blue-light': '#8dabed',
 		  'heading-colour': '#111827',
-          'body-colour': '#6B7280'
+          'body-colour': '#374151'
 		},
 		extend:
 		{
@@ -41,7 +41,18 @@ module.exports = {
 					},
 					li: {
 						'font-weight': '300',		
-					}
+					},
+					a: {
+						'text-decoration': 'none',	
+						'font-weight': '900',
+						'transition-duration': '150ms',
+						'transition-timing-function': 'cubic-bezier(0.4, 0, 0.2, 1)',
+					},
+					'a:hover': {
+						'color': theme('colors.brand-blue-light'),	
+						'transition-duration': '150ms',
+						'transition-timing-function': 'cubic-bezier(0.4, 0, 0.2, 1)',
+					},
 				  },
 				},
 			  }),
