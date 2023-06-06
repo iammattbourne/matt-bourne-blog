@@ -3,12 +3,10 @@ layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: 2022-07-03
 title: Tailwind Styling
 description: An introduction to tailwind styling
-tag:
-  - Tailwind
-author: Astro Learner
+author: Matt Bourne
 date: 2023-04-16T15:26:15.887Z
 tags:
-  - Astro
+  - Tailwind
 featuredImageTitle: flexbox
 featuredImageAlt: This is another flexbox image
 ---
