@@ -1,16 +1,16 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: 2022-07-03
-title: Blog post 3
-description: Testing
+title: Tailwind Styling
+description: An introduction to tailwind styling
 tag:
-  - astro
+  - Tailwind
 author: Astro Learner
 date: 2023-04-16T15:26:15.887Z
 tags:
   - Astro
-featuredImageTitle: flowers
-featuredImageAlt: This is another flower image
+featuredImageTitle: flexbox
+featuredImageAlt: This is another flexbox image
 ---
 # Markdown: Syntax
 
